@@ -1,0 +1,27 @@
+<!--  -->
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="mainApp" ng-controller="mainController">
+<div>
+	<table>
+	<thead>
+		<tr>
+			<th ng-click="orderByMe('name')">Name</th>
+			<th ng-click="orderByMe('class')">Class</th>
+			<th ng-click="orderByMe('marks')">Marks</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in students | orderBy:myOrder">
+			<td>{{x.name}}</td>
+			<td>{{x.class}}</td>
+			<td>{{x.marks}}</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="Tables.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- RootScope is available in entire application i.e. Outside controller but inside application -->
+<!-- If a variable is present in both current scope & global scope then it will have value of current scope -->
+<!--  -->
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body  ng-app="mainApp">
+<div ng-controller="mainController">
+<!-- This is scope message -->
+{{message}}
+</div>
+<div>
+<!-- This is rootScope message which is inside Application but outside controller -->
+{{message}}
+</div>
+</body>
+<script src="RootScope.js" type="text/javascript"></script>
+</html>

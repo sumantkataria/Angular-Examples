@@ -1,0 +1,29 @@
+<!-- Filters are added to format data -->
+<!-- Filters are added to expressions by using pipe character |, then by the filter -->
+<!-- Commonly used filters are currency, date, filter, json, limitTo, lowercase, number, orderBy, uppercase -->
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="mainApp" ng-controller="mainController">
+<div>
+	<table>
+	<thead>
+		<tr>
+		<th ng-click="orderByMe('name')">Name</th>
+		<th ng-click="orderByMe('age')">Age</th>
+		<th ng-click="orderByMe('marks')">Marks</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in students | orderBy:myOrderBy">
+		<td>{{x.name}}</td>
+		<td>{{x.age}}</td>
+		<td>{{x.marks}}</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="Filters2.js"></script>
+</body>
+</html>
