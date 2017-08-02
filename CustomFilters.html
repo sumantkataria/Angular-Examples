@@ -1,0 +1,18 @@
+<!-- Filters are added to format data -->
+<!-- Filters are added to expressions by using pipe character |, then by the filter -->
+<!-- Commonly used filters are currency, date, filter, json, limitTo, lowercase, number, orderBy, uppercase -->
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="mainApp" ng-controller="mainController">
+<div>
+	<ul>
+		<li ng-repeat="x in names">
+			{{x | myFormat}}
+		</li>
+	</ul>
+</div>
+<script type="text/javascript" src="CustomFilters.js"></script>
+</body>
+</html>
