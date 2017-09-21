@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link href="style.css" rel="stylesheet">
+<body ng-app="orderFormApp" ng-controller="orderFormController">
+	
+	<form>
+		<h2>Services</h2>
+		<ul>
+		<li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}">
+			{{service.name}}<span style="padding-left:50px;">{{service.price | currency}}</span>
+		</li>
+		</ul>
+		<div class="total">
+			Total <span>{{total() | currency}}</span>
+		</div>
+		
+	</form>
+</body>
+<script type="text/javascript" src="OrderForm.js"></script>
+</html>

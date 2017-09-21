@@ -1,0 +1,30 @@
+<html ng-app="mainApp">
+	<head>
+	<title>Angular Setup</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="TwoWayDataBinding.js"></script>
+	</head>
+	
+	<body ng-controller="mainController as main">
+		<p> Name: {{main.user.name}}</p>
+		<p> Favorite Fruit: {{main.user.favoriteFruit}}</p>
+		<p> Is Active: {{main.user.isActive | YesOrNo}}</p>
+		<hr/>
+		
+		<p> Enter Name: </p>
+		<p><input type="text" ng-model="main.user.name"></p>
+		
+		<p> Select Favorite Fruit:</p>
+		<p><select ng-model="main.user.favoriteFruit" ng-options="fruit for fruit in main.fruitList"></select></p>
+		
+		<p>Select Active:</p>
+		<p><input type="checkbox" ng-model="main.user.isActive">Is Active</p>
+		
+		<p>Alternate Select Active</p>
+		<p>
+		<input type="radio" ng-model="main.user.isActive" ng-value="true">Yes
+		<input type="radio" ng-model="main.user.isActive" ng-value="false">No
+		</p>
+		
+	</body>
+</html>

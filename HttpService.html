@@ -1,0 +1,14 @@
+<html ng-app="mainApp">
+	<head>
+	<title>Angular Setup</title>
+	<script type="text/javascript" src="angular.js"></script>
+	</head>
+	<body ng-controller="mainController">
+		<ul>
+			<li ng-repeat="x in myData">
+			{{ x.Name + ', ' + x.Country }}
+			</li>
+		</ul>
+		<script type="text/javascript" src="HttpService.js"></script>
+	</body>
+</html>

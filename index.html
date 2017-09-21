@@ -1,0 +1,22 @@
+<html ng-app="mainApp">
+	<head>
+	<title>Angular Setup</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	</head>
+	
+	<body ng-controller="mainController">
+		<p>{{sayHello('Sumant')}}</p>
+		<p>{{sayHello('Kataria')}}</p>
+		
+		
+		<p><input type="text" ng-model="itemIndex">
+		<input type="button" value="Get Item" ng-click="getItem()"></p>
+		<p>Current Item----{{currentItem}}</p>
+		
+		
+		
+		<p>Random Value---{{randomValue}}</p>
+		<p>Random Value---{{::randomValue}}</p>
+	</body>
+</html>
