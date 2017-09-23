@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="mainApp" ng-controller="mainController">
+<div>
+	<table>
+		<tr ng-repeat="language in languages">
+			<td>{{language.name}}</td>
+			<td>{{language.likes}}</td>
+			<td>{{language.dislikes}}</td>
+			<td><input type="button" value="Like" ng-click="inclike(language)"</td>
+			<td><input type="button" value="Dislike" ng-click="declike(language)"</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript" src="LikesAndDislikes.js"></script>
+</body>
+</html>
